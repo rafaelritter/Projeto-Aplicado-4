@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Cadastrar Animal</title>
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header>
+			<div>
+				<h1><img src="logo.png" /></h1>
+			</div>
+		</header>
+		<main>
+			<form
+				th:object="${requisicaoNovoAnimal}"
+				action="/animal/novo"
+				method="POST"
+			>
+				<label for="nomeAnimal">Nome</label>
+				<input th:field="*{nomeAnimal}" type="text" class="input-padrao" />
+				<div th:errors="*{nomeAnimal}"></div>
+				<label for="dono">Dono</label>
+				<input th:field="*{dono}" type="text" class="input-padrao" />
+				<div th:errors="*{dono}"></div>
+				<label for="especie">Espécie</label>
+				<input th:field="*{especie}" type="text" class="input-padrao" />
+				<div th:errors="*{especie}"></div>
+				<label for="raca">Raça</label>
+				<input th:field="*{raca}" type="text" class="input-padrao" />
+				<div th:errors="*{raca}"></div>
+				<label for="sexo">Sexo</label>
+				<input th:field="*{sexo}" type="text" class="input-padrao" />
+				<div th:errors="*{sexo}"></div>
+				<label for="dataNascimentoAnimal">Nascimento</label>
+				<input
+					th:field="*{dataNascimentoAnimal}"
+					type="text"
+					class="input-padrao"
+				/>
+				<div th:errors="*{dataNascimentoAnimal}"></div>
+				<input type="submit" value="Cadastrar" class="enviar" />
+			</form>
+		</main>
+	</body>
+</html>
