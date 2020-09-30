@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ClinicavetApplication<clinicavet>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.projeto.clinicavet.ClinicavetApplication",
+            "projectName": "clinicavet",
+            "args": ""
+        }
+    ]
+}
