@@ -1,0 +1,90 @@
+body {
+	font-family: "Source Sans Pro", sans-serif;
+ }
+  
+ img {
+	background: none;
+	max-width: 100%;
+}
+/* Nav bar */
+nav div {
+	background: linear-gradient(to right, #296268, #49b1bc);
+	width: 100% !important;
+	height: 15vh !important;
+	line-height: 15vh;
+} 
+  
+nav img {
+	width: 100px;
+	margin: auto;
+	padding: 10px !important;
+}
+nav ul{
+	display: inline-block;
+}
+nav ul li {
+	padding: 0 1em !important;
+}
+  
+/* header index */
+ 
+ header {
+	width: 100vw;
+	height: 85vh;
+	display: flex !important;
+	justify-content: center;
+	padding: 5em;
+}
+header img {
+	width:400px;
+	height:400px;
+}
+  
+/* Form login */
+  
+.formulario {
+	width: 100vw;
+	height: 85vh;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+}
+  
+  
+.div__form {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	border-radius: 8px;
+	background: rgb(73,177,188);
+	background: radial-gradient(circle, rgba(73,177,188,1) 0%, rgba(41,98,104,1) 100%);
+}
+  
+.div__form h4 {
+	text-align: center;
+	color: #FFF;
+}
+
+.div__form span {
+	  display: block;
+}
+
+.div__form i {
+	  color: #FFF;
+	  font-size: 20px;
+	  padding-left: 15px;
+}
+
+.div__form input[type=text] {
+	margin: 1em;
+}
+
+.div__form input[type=submit] {
+	width: 100%;
+	margin: 1em auto;
+	border-radius: 10px;
+	background-color: #FAFAFA;
+}

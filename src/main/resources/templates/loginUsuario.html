@@ -1,40 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Clínica Veterinária</title>
-		<link rel="stylesheet" href="reset.css" />
-		<link rel="stylesheet" href="style.css" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
-	<body>
-		<header>
-			<div>
-				<h1><img src="logo.png" /></h1>
-				<nav>
-					<ul>
-						<!--<li><a href="resultadosExames.html">Resultados Exames</a></li>
-            <li><a href="faleConosco.html">Fale Conosco</a></li>-->
-						<li><a href="/home">Home</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		<main>
-			<form method="post">
-				<label for="nome">Usuário</label>
-				<input
-					type="text"
-					id="usuario"
-					class="input-padrao"
-					required
-					placeholder="Nome de Usuário"
-				/>
 
-				<label for="senha">Senha</label>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+  lang="pt-br"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Clínica Veterinária</title>
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <img src="style/logo.png" alt="Logo" class="brand-logo left">
+        <ul class="right">
+          <li><a href="#">Resultados Exames</a></li>
+          <li><a href="#">Fale conosco</a></li>
+          <li><a href="/home">Home</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="formulario">
+      <div class="div__form">
+        <h4>Login</h4>
+			<form method="post">
+				<label for="nome"><i class="fas fa-user-alt"></i></label>
+				<input
+				type="text"
+				id="usuario"
+				class="input-padrao"
+				required
+				placeholder="Usuário"
+				/>
+				<label for="senha"><i class="fas fa-lock"></i></label>
 				<input
 					type="password"
 					id="senha"
@@ -42,8 +47,13 @@
 					required
 					placeholder="Senha"
 				/>
-				<input type="submit" value="Enviar" class="cadastrar" />
+				<input type="submit" value="LOGIN" class="cadastrar" />
 			</form>
-		</main>
-	</body>
+      </div>
+    </section>
+    
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    
+  </body>
 </html>
