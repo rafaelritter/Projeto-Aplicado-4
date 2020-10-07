@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotBlank;
 
 @Entity
 public class Animal {
@@ -13,17 +12,11 @@ public class Animal {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long IdAnimal;
 
-    @NotBlank
     private String nomeAnimal;
-    @NotBlank
     private String dono;
-    @NotBlank
     private String especie;
-    @NotBlank
     private String raca;
-    @NotBlank
     private String sexo;
-    @NotBlank
     private String dataNascimentoAnimal;
 
     public String getNomeAnimal() {

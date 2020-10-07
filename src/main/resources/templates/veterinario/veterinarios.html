@@ -1,0 +1,39 @@
+<html>
+	<head>
+        <meta charset="UTF-8" />
+        <title>Exibir Veterinários</title>
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+			rel="stylesheet"
+        />
+    </head>
+	<body>
+		<header>
+			<div>
+				<h1><img src="logo.png" /></h1>
+			</div>
+		</header>
+	
+	    <main>
+			<div th:each="veterinario : ${veterinarios}">
+
+                <div th:text="${veterinario.nomeVeterinario}">Nome do Veterinário</div>
+                
+                <div>CRMV: <span th:text="${veterinario.crmv}">00000-00</span></h2>
+                <div>RG: <span th:text="${veterinario.rgVeterinario}">00.000.000-0</span></h2>
+                <div>CPF: <span th:text="${veterinario.cpfVeterinario}">00000000000</span></h2>
+                <div>E-mail: <span th:text="${veterinario.emailVeterinario}">veterinario@seudominio.com</span></h2>
+                <div>Celular: <span th:text="${veterinario.celularVeterinario}">(xx)xxxxx-xxxx</span></h2>
+                <div>Telefone: <span th:text="${veterinario.telefoneVeterinario}">(xx)xxxxx-xxxx</span></h2>
+                <div>Endereço: <span th:text="${veterinario.enderecoVeterinario}">Rua</span></h2>		
+                <div>Complemento: <span th:text="${veterinario.complementoVeterinario}">Complemento</span></h2>	
+                <div>Número: <span th:text="${veterinario.numeroResidenciaVeterinario}">123</span></h2>
+                <div>Cidade: <span th:text="${veterinario.cidadeVeterinario}">Cidade</span></h2>	
+                <div>Estado: <span th:text="${veterinario.estadoVeterinario}">Estado</span></h2>
+                <div>CEP: <span th:text="${veterinario.cepVeterinario}">00000000</span></h2>
+		    </div>
+        </main>
+    </body>
+</html>

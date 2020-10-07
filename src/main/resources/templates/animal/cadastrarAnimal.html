@@ -18,33 +18,30 @@
 			</div>
 		</header>
 		<main>
-			<form
-				th:object="${requisicaoNovoAnimal}"
-				action="/animal/novo"
-				method="POST"
-			>
+			<form action="/animal/novo" method="POST">
 				<label for="nomeAnimal">Nome</label>
-				<input th:field="*{nomeAnimal}" type="text" class="input-padrao" />
-				<div th:errors="*{nomeAnimal}"></div>
+				<input name="nomeAnimal" type="text" class="input-padrao" required />
+
 				<label for="dono">Dono</label>
-				<input th:field="*{dono}" type="text" class="input-padrao" />
-				<div th:errors="*{dono}"></div>
+				<input name="dono" type="text" class="input-padrao" required />
+
 				<label for="especie">Espécie</label>
-				<input th:field="*{especie}" type="text" class="input-padrao" />
-				<div th:errors="*{especie}"></div>
+				<input name="especie" type="text" class="input-padrao" required />
+
 				<label for="raca">Raça</label>
-				<input th:field="*{raca}" type="text" class="input-padrao" />
-				<div th:errors="*{raca}"></div>
+				<input name="raca" type="text" class="input-padrao" required />
+
 				<label for="sexo">Sexo</label>
-				<input th:field="*{sexo}" type="text" class="input-padrao" />
-				<div th:errors="*{sexo}"></div>
+				<input name="sexo" type="text" class="input-padrao" required />
+
 				<label for="dataNascimentoAnimal">Nascimento</label>
 				<input
-					th:field="*{dataNascimentoAnimal}"
+					name="dataNascimentoAnimal"
 					type="text"
 					class="input-padrao"
+					required
 				/>
-				<div th:errors="*{dataNascimentoAnimal}"></div>
+
 				<input type="submit" value="Cadastrar" class="enviar" />
 			</form>
 		</main>

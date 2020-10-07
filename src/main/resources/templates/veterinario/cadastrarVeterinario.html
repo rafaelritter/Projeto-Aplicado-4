@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Cadastrar Veterinário</title>
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header>
+			<div>
+				<h1><img src="logo.png" /></h1>
+			</div>
+		</header>
+		<main>
+			<form action="/veterinario/novo" method="POST">
+				<label for="nomeVeterinario">Nome</label>
+				<input
+					name="nomeVeterinario"
+					type="text"
+					class="input-padrao"
+					required
+				/>
+
+				<label for="crmv">CRMV</label>
+				<input name="crmv" type="number" class="input-padrao" required />
+
+				<label for="rgVeterinario">RG</label>
+				<input name="rgVeterinario" type="text" class="input-padrao" required />
+
+				<label for="cpfVeterinario">CPF</label>
+				<input
+					name="cpfVeterinario"
+					type="number"
+					class="input-padrao"
+					required
+				/>
+
+				<label for="emailVeterinario">E-mail</label>
+				<input
+					name="emailVeterinario"
+					type="email"
+					class="input-padrao"
+					required
+					placeholder="veterinario@seudominio.com"
+				/>
+
+				<label for="celularVeterinario">Celular</label>
+				<input
+					name="celularVeterinario"
+					type="tel"
+					class="input-padrao"
+					required
+					placeholder="(XX)XXXXX-XXXX"
+				/>
+
+				<label for="telefoneVeterinario">Telefone</label>
+				<input
+					name="telefoneVeterinario"
+					type="tel"
+					class="input-padrao"
+					required
+					placeholder="(XX)XXXXX-XXXX"
+				/>
+
+				<label for="enderecoVeterinario">Endereço</label>
+				<input
+					name="enderecoVeterinario"
+					type="text"
+					class="input-padrao"
+					required
+				/>
+
+				<label for="complementoVeterinario">Complemento</label>
+				<input
+					name="complementoVeterinario"
+					type="text"
+					class="input-padrao"
+					required
+				/>
+
+				<label for="numeroResidenciaVeterinario">Número</label>
+				<input
+					name="numeroResidenciaVeterinario"
+					type="number"
+					class="input-padrao"
+					required
+				/>
+
+				<label for="cidadeVeterinario">Cidade</label>
+				<input
+					name="cidadeVeterinario"
+					type="text"
+					class="input-padrao"
+					required
+				/>
+
+				<label for="estadoVeterinario">Estado</label>
+				<input
+					name="estadoVeterinario"
+					type="text"
+					class="input-padrao"
+					required
+				/>
+
+				<label for="cepVeterinario">CEP</label>
+				<input
+					name="cepVeterinario"
+					type="number"
+					class="input-padrao"
+					required
+				/>
+
+				<input type="submit" value="Cadastrar" class="enviar" />
+			</form>
+		</main>
+	</body>
+</html>

@@ -2,8 +2,6 @@ package com.projeto.clinicavet.controller;
 
 import java.util.List;
 
-import javax.validation.Valid;
-
 import com.projeto.clinicavet.dto.RequisicaoNovoAnimal;
 import com.projeto.clinicavet.model.Animal;
 import com.projeto.clinicavet.repository.AnimalRepository;
@@ -11,7 +9,6 @@ import com.projeto.clinicavet.repository.AnimalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,7 +25,7 @@ public class AnimalController {
 
         List<Animal> animais = animalRepository.findAll();
         model.addAttribute("animais", animais);
-        return "animais";
+        return "animal/animais";
     }
 
     @GetMapping("/cadastrarAnimal")
@@ -37,11 +34,7 @@ public class AnimalController {
     }
 
     @PostMapping("/novo")
-    public String novoAnimal(@Valid RequisicaoNovoAnimal requisicao, BindingResult result) {
-
-        if (result.hasErrors()) {
-            return "animal/cadastrarAnimal";
-        }
+    public String novoAnimal(RequisicaoNovoAnimal requisicao) {
 
         Animal animal = requisicao.toAnimal();
         animalRepository.save(animal);

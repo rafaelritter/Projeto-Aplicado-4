@@ -1,22 +1,14 @@
 package com.projeto.clinicavet.dto;
 
-import javax.validation.constraints.NotBlank;
-
 import com.projeto.clinicavet.model.Animal;
 
 public class RequisicaoNovoAnimal {
 
-    @NotBlank
     private String nomeAnimal;
-    @NotBlank
     private String dono;
-    @NotBlank
     private String especie;
-    @NotBlank
     private String raca;
-    @NotBlank
     private String sexo;
-    @NotBlank
     private String dataNascimentoAnimal;
 
     public String getNomeAnimal() {
