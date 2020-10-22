@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+  lang="pt-br"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cadastrar veterinário</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  </head>
+  <body class="body__cadVet">
+      <nav class="nav__vertical">
+            <a href="/home" class="nav__logo"><img src="../style/logo.png" alt="Logo" class="brand-logo" /></a>
+            <ul>
+				<li><a href="/paginaInicial">Página Inicial</a></li>
+                <li><a href="/cliente/cadastrarCliente">Cadastrar Cliente</a></li>
+                <li><a href="/animal/cadastrarAnimal">Cadastrar Animal</a></li>
+                <li><a href="/veterinario/cadastrarVeterinario">Cadastrar Veterinário</a></li>
+                <li><a href="#">Agendar Consulta</a></li>
+                <li><a href="#">Adicionar Procedimento</a></li>
+            </ul>
+      </nav>
+		<section class="cad">
+			<div class="row">
+				<form action="/cliente/novo" method="POST" class="col s12">
+
+					<div class="row">
+						<div class="input-field col s12">
+							<label for="nomeCliente">Nome</label>
+							<input
+							name="nomeCliente"
+							type="text"
+							class="input-padrao"
+							required
+							/>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="input-field col s6">
+							<label for="crmv">CRMV</label>
+							<input name="crmv" type="number" class="input-padrao" required />
+						</div>
+
+						<div class="input-field col s6">
+							<label for="rgCliente">RG</label>
+							<input name="rgCliente" type="text" class="input-padrao" required />
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s6">
+							<label for="cpfCliente">CPF</label>
+							<input
+							name="cpfCliente"
+							type="number"
+							class="input-padrao"
+							required
+							/>
+						</div>
+
+						<div class="input-field col s6">	
+							<label for="emailCliente">E-mail</label>
+							<input
+							name="emailCliente"
+							type="email"
+							class="input-padrao"
+							required
+							placeholder="Cliente@seudominio.com"
+							/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s6">	
+							<label for="celularCliente">Celular</label>
+							<input
+							name="celularCliente"
+							type="tel"
+							class="input-padrao"
+							required
+							placeholder="(XX)XXXXX-XXXX"
+							/>
+						</div>
+
+						<div class="input-field col s6">
+							<label for="telefoneCliente">Telefone</label>
+							<input
+							name="telefoneCliente"
+							type="tel"
+							class="input-padrao"
+							required
+							placeholder="(XX)XXXXX-XXXX"
+							/>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="input-field col s12">
+							<label for="enderecoCliente">Endereço</label>
+							<input
+							name="enderecoCliente"
+							type="text"
+							class="input-padrao"
+							required
+							/>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="input-field col s12">
+							<label for="complementoCliente">Complemento</label>
+							<input
+							name="complementoCliente"
+							type="text"
+							class="input-padrao"
+							placeholder="Opcional"
+							/>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="input-field col s6">	
+							<label for="numeroResidenciaCliente">Número</label>
+							<input
+							name="numeroResidenciaCliente"
+							type="number"
+							class="input-padrao"
+							required
+							/>
+						</div>
+
+						<div class="input-field col s6">
+							<label for="cidadeCliente">Cidade</label>
+							<input
+							name="cidadeCliente"
+							type="text"
+							class="input-padrao"
+							required
+							/>
+						</div>
+					</div>
+											
+					<div class="row">
+						<div class="input-field col s6">	
+							<label for="estadoCliente">Estado</label>
+							<input
+							name="estadoCliente"
+							type="text"
+							class="input-padrao"
+							required
+							/>
+						</div>
+
+						<div class="input-field col s6">
+							<label for="cepCliente">CEP</label>
+							<input
+							name="cepCliente"
+							type="number"
+							class="input-padrao"
+							required
+							/>
+						</div>
+					</div>
+
+					<input type="submit" value="Cadastrar" class="enviar" />
+				</form>
+			</div>
+		</section>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+		</body>
+</html>
