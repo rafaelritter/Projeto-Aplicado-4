@@ -92,44 +92,99 @@ header img {
 	background-color: #FAFAFA;
 }
 
-/* pagina inicial */
+/* Nav vertical */
 
-.body__inicial nav {
+.nav__vertical {
 	top: 0;
 	left: 0;
 	height: 100vh;
 	width: 20vw;
 	background-color: #296268;
+	position: fixed;
 }
 
-/* .body__inicial .nav__logo {
-	display: inline-block;
-} */
-
-/* .body__inicial .nav__logo img {
+.nav__vertical .nav__logo {
+	width: 100%;
 	display: block;
-	margin: auto;
-} */
+	text-align: center;
+}
+.nav__vertical .nav__logo img {
+	position: initial !important;
+	margin-top: .5em;
+}
 
-.body__inicial ul {
-	padding-top: 6em;
+.nav__vertical ul {
 	width: 100%;
 }
 
-.body__inicial ul li {
+.nav__vertical ul li {
 	margin: auto;
 	float: none;
 	text-align: center;
 }
 
-.tabela {
+/* pagina inicial */
+
+.body__inicial .tabela {
 	height: 100%;
-	width: 80vw;;
+	width: 80vw;
+	margin-left: 25%;
 }
 
-.form__animal {
-	top: 0;
-	left: 20;
-	height: 100vh;
-	width: 80vw;
+.body__inicial .tabela .search-container form {
+	overflow: hidden;	
+	margin-top: 10%;
+	background-color: #FFF;
+	display: flex;
+}
+.body__inicial .tabela .search-container input[type=text] {
+	font-size: 17px;
+	border: none;
+	text-align: center;
+}
+.body__inicial .tabela .search-container button {
+	background: #ddd;
+	font-size: 17px;
+	border: none;
+	cursor: pointer;
+	background-color: #296268;
+	padding: 1em;
+}
+.body__inicial .row .col {
+	padding: 0rem !important;
+}
+
+.body__inicial .tabela ul {
+	background-color: #296268;
+	display: flex;
+	margin-right: 20%;
+	padding: 1em;
+}
+.body__inicial .tabela ul li a {
+	color: #FFF;
+	padding: 0 4em;
+}
+
+/* Cadastro */
+
+.cad {
+	margin: 2em 25%;
+	display: block;
+}
+
+.cad form input[type=submit] {
+	color: #FFF;
+	padding: 1em 8em;
+	margin: 3em auto;
+	border-style: none;
+	background: rgb(73,177,188);
+	background: radial-gradient(circle, rgba(73,177,188,1) 0%, rgba(41,98,104,1) 100%);
+}
+
+/* Cadastro Animal */
+
+/* Cadastro Vet */
+
+.body__cadVet .cad .row {
+	margin-bottom: 0px !important;
 }

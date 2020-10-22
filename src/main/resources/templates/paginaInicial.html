@@ -15,13 +15,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   </head>
   <body class="body__inicial">
-      <nav class="nav__vert">
+      <nav class="nav__vertical">
             <a href="/home.html" class="nav__logo"><img src="style/logo.png" alt="Logo" class="brand-logo" /></a>
             <ul>
-                <li><a href="#">Página Inicial</a></li>
-                <li><a href="#">Cadastrar Cliente</a></li>
-                <li><a href="#">Cadastrar Animal</a></li>
-                <li><a href="#">Cadastrar Veterinário</a></li>
+                <li><a href="/paginaInicial.html">Página Inicial</a></li>
+                <li><a href="../templates/cliente/cadCliente.html">Cadastrar Cliente</a></li>
+                <li><a href="../templates/animal/cadAnimal.html">Cadastrar Animal</a></li>
+                <li><a href="../templates/veterinario/cadVet.html">Cadastrar Veterinário</a></li>
                 <li><a href="#">Agendar Consulta</a></li>
                 <li><a href="#">Adicionar Procedimento</a></li>
                 <li><a href="#">Sair</a></li>
@@ -29,13 +29,20 @@
       </nav>
       <section class="tabela">
         <div class="row">
-            <div class="col s6 search-container">
+            <div class="col s5 search-container">
                 <form action="/action_page.php">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                  <input type="text" placeholder="Search.." name="search">
                 </form>
             </div>
         </div>
+        
+        <ul>
+          <li><a href="#">Agendamentos</a></li>
+          <li><a href="#">Animais/Clientes</a></li>
+          <li><a href="#">Veterinários</a></li>
+          <li><a href="#">Fale Conosco</a></li>
+        </ul>
       </section>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>

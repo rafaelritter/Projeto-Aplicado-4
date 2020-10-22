@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+  lang="pt-br"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Clínica Veterinária</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  </head>
+  <body class="body__cadAnimal">
+      <nav class="nav__vertical">
+            <a href="/home.html" class="nav__logo"><img src="../style/logo.png" alt="Logo" class="brand-logo" /></a>
+            <ul>
+                <li><a href="../paginaInicial.html">Página Inicial</a></li>
+                <li><a href="../templates/cliente/cadCliente.html">Cadastrar Cliente</a></li>
+                <li><a href="../templates/animal/cadAnimal.html">Cadastrar Animal</a></li>
+                <li><a href="../templates/veterinario/cadVet.html">Cadastrar Veterinário</a></li>
+                <li><a href="#">Agendar Consulta</a></li>
+                <li><a href="#">Adicionar Procedimento</a></li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+      </nav>
+      <section class="cad">
+		  <div class="row">
+			  <form action="/animal/novo" method="POST" class="col s12">
+				<div class="row">
+					<div class="input-field col s12">
+						<label for="nomeAnimal">Nome</label>
+						<input name="nomeAnimal" type="text" class="input-padrao" required />
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="input-field col s12">
+						<label for="dono">Dono</label>
+						<input name="dono" type="text" class="input-padrao" required />
+					</div>	
+				</div>
+				
+				<div class="row">
+					<div class="input-field col s6">
+						<label for="especie">Espécie</label>
+						<input name="especie" type="text" class="input-padrao" required />
+					</div>
+					
+					<div class="input-field col s6">
+						<label for="raca">Raça</label>
+						<input name="raca" type="text" class="input-padrao" required />
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="input-field col s6">
+						<label for="sexo">Sexo</label>
+						<input name="sexo" type="text" class="input-padrao" required />
+					</div>
+					
+					<div class="input-field col s6">
+						<label for="dataNascimentoAnimal">Nascimento</label>
+						<input
+						name="dataNascimentoAnimal"
+						type="text"
+						class="input-padrao"
+						required
+						/>
+					</div>
+				</div>
+					
+				<input type="submit" value="Cadastrar" class="enviar" />
+            </form>
+		</div>
+      </section>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  </body>
+</html>
