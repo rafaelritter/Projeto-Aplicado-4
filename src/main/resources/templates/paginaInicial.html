@@ -18,18 +18,18 @@
       <nav class="nav__vertical">
             <a href="/home" class="nav__logo"><img src="style/logo.png" alt="Logo" class="brand-logo" /></a>
             <ul>
-                <!--<li th:inline="text"> Olá [[${#httpServletRequest.remoteUser}]]!</li>-->
+                <li th:inline="text"> Olá [[${#httpServletRequest.remoteUser}]]!</li>
                 <li><a href="/paginaInicial">Página Inicial</a></li>
                 <li><a href="/cliente/cadastrarCliente">Cadastrar Cliente</a></li>
                 <li><a href="/animal/cadastrarAnimal">Cadastrar Animal</a></li>
                 <li><a href="/veterinario/cadastrarVeterinario">Cadastrar Veterinário</a></li>
                 <li><a href="#">Agendar Consulta</a></li>
                 <li><a href="#">Adicionar Procedimento</a></li>
-                <!--<li>
+                <li>
                   <form th:action="@{/logout}" method="post">
                     <input type="submit" value="Sair"/>
-                  </form>-->
-              </li>
+                  </form>
+                </li>
             </ul>
       </nav>
       <section class="tabela">

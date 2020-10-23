@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <html
-  xmlns:th="http://www.thymeleaf.org"
-  xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+  xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
   lang="pt-br"
 >
   <head>
@@ -30,24 +30,16 @@
     <section class="formulario">
       <div class="div__form">
         <h4>Login</h4>
-        <form method="post">
-          <label for="nome"><i class="fas fa-user-alt"></i></label>
-          <input
-          type="text"
-          id="usuario"
-          class="input-padrao"
-          required
-          placeholder="Usuário"
-          />
-          <label for="senha"><i class="fas fa-lock"></i></label>
-          <input
-            type="password"
-            id="senha"
-            class="input-padrao"
-            required
-            placeholder="Senha"
-          />
-          <input type="submit" value="LOGIN" class="cadastrar" />
+        <div th:if="${param.error}">
+          Usuário ou senha inválidos.
+        </div>
+        <div th:if="${param.logout}">
+          Você foi deslogado.
+        </div>
+        <form th:action="@{/login}" method="post">
+          <div><label for="username"><i class="fas fa-user-alt"></i> Usuário : <input type="text" name="username"/> </label></div>
+          <div><label for="senha"><i class="fas fa-lock"></i> Senha: <input type="password" name="password"/> </label></div>
+          <div><input type="submit" value="Login" class="cadastrar"/></div>
         </form>
       </div>
     </section>
