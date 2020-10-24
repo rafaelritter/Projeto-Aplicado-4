@@ -19,12 +19,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().antMatchers("/home", "/resources/**", "/static/**", "/**/*.css", "/**/*.png")
                 .permitAll().anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll()
                 .loginProcessingUrl("/login").defaultSuccessUrl("/paginaInicial", true).and().logout().permitAll();
+        http.csrf().disable();
     }
 
     @Bean
     @Override
     public UserDetailsService userDetailsService() {
-        UserDetails user = User.withDefaultPasswordEncoder().username("usuario").password("clinica").roles("USER")
+        UserDetails user = User.withDefaultPasswordEncoder().username("usuario").password("clinica").roles("ADM")
                 .build();
 
         return new InMemoryUserDetailsManager(user);
