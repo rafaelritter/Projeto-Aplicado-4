@@ -7,7 +7,7 @@
 >
   <head>
     <meta charset="UTF-8" />
-    <title>Cadastrar Animal</title>
+    <title>Agendar Consulta</title>
     <link rel="stylesheet" href="../style/reset.css" />
     <link rel="stylesheet" href="../style/style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
@@ -33,47 +33,42 @@
       </nav>
       <section class="cad">
 		  <div class="row">
-			  <form action="/animal/novo" method="POST" class="col s12">
+			  <form action="/consulta/novo" method="POST" class="col s12">
 				<div class="row">
 					<div class="input-field col s12">
-						<label for="nomeAnimal">Nome</label>
-						<input name="nomeAnimal" type="text" class="input-padrao" required />
+						<label for="veterinarioConsulta">Veterinario</label>
+						<input name="veterinarioConsulta" type="text" class="input-padrao" required />
 					</div>
 				</div>
 				
 				<div class="row">
 					<div class="input-field col s12">
-						<label for="dono">Dono</label>
-						<input name="dono" type="text" class="input-padrao" required />
+						<label for="clienteConsulta">Cliente</label>
+						<input name="clienteConsulta" type="text" class="input-padrao" required />
 					</div>	
 				</div>
 				
 				<div class="row">
 					<div class="input-field col s6">
-						<label for="especie">Espécie</label>
-						<input name="especie" type="text" class="input-padrao" required />
+						<label for="animalConsulta">Animal</label>
+						<input name="animalConsulta" type="text" class="input-padrao" required />
 					</div>
 					
 					<div class="input-field col s6">
-						<label for="raca">Raça</label>
-						<input name="raca" type="text" class="input-padrao" required />
+						<label for="especieConsulta">Espécie</label>
+						<input name="especieConsulta" type="text" class="input-padrao" required />
 					</div>
 				</div>
 				
 				<div class="row">
 					<div class="input-field col s6">
-						<label for="sexo">Sexo</label>
-						<input name="sexo" type="text" class="input-padrao" required />
+						<label for="dataConsulta">Data</label>
+						<input name="dataConsulta" type="text" class="input-padrao" required />
 					</div>
 					
 					<div class="input-field col s6">
-						<label for="dataNascimentoAnimal">Nascimento</label>
-						<input
-						name="dataNascimentoAnimal"
-						type="text"
-						class="input-padrao"
-						required
-						/>
+						<label for="horarioConsulta">Horário</label>
+						<input name="horarioConsulta" type="text" class="input-padrao" required />
 					</div>
 				</div>
 					

@@ -1,0 +1,33 @@
+<html>
+	<head>
+        <meta charset="UTF-8" />
+        <title>Exibir Consultas</title>
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+			rel="stylesheet"
+        />
+    </head>
+	<body>
+		<header>
+			<div>
+				<h1><img src="logo.png" /></h1>
+			</div>
+		</header>
+	
+	    <main>
+			<div th:each="consulta : ${consultas}">
+
+                <div th:text="${consulta.dataConsulta}">Consulta</div>
+                
+                <div>Veterinário: <span th:text="${consulta.veterinarioConsulta}">Dra. Isabel</span></h2>
+                <div>Cliente: <span th:text="${consulta.clienteConsulta}">Maria</span></h2>
+                <div>Animal: <span th:text="${consulta.animalConsulta}">Rex</span></h2>
+                <div>Espécie: <span th:text="${consulta.especieConsulta}">Cachorro</span></h2>
+                <div>Data: <span th:text="${consulta.dataConsulta}">25/11/2020</span></h2>
+                <div>Horário: <span th:text="${consulta.horarioConsulta}">14h30</span></h2>		
+		    </div>
+        </main>
+    </body>
+</html>
