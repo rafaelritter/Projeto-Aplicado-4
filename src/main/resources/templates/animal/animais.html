@@ -1,29 +1,55 @@
-<html>
-	<head>
-        <meta charset="UTF-8" />
-        <title>Exibir Animais</title>
-		<link rel="stylesheet" href="reset.css" />
-		<link rel="stylesheet" href="style.css" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
-			rel="stylesheet"
-        />
-    </head>
-	<body>
-		<header>
-			<div>
-				<h1><img src="logo.png" /></h1>
-			</div>
-		</header>
-			<div th:each="animal : ${animais}">
-				<div th:text="${animal.nomeAnimal}">Nome do Animal</div>
-                    <div>Especie: <span th:text="${animal.especie}">Cão</span></h2>
-                    <div>Raça: <span th:text="${animal.raca}">Labrador</span></div>
-                    <div>Sexo: <span th:text="${animal.sexo}">F</span></div>
-                    <div>Dono: <span th:text="${animal.dono}">José</span></div>
-					<div>Data Nascimento: <span th:text="${animal.dataNascimentoAnimal}">2020-01-01</span></div>		
-				</div>
-			</div>
-		</div>
-	</body>
+<!DOCTYPE html>
+
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+  lang="pt-br"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Clínica Veterinária</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  </head>
+  <body class="body__inicial">
+      <nav class="nav__vertical">
+            <a href="/paginaInicial" class="nav__logo"><img src="../style/logo.png" alt="Logo" class="brand-logo" /></a>
+            <ul>
+                <li th:inline="text"> Olá [[${#httpServletRequest.remoteUser}]]!</li>
+                <li><a href="/paginaInicial">Página Inicial</a></li>
+                <li><a href="/cliente/cadastrarCliente">Cadastrar Cliente</a></li>
+                <li><a href="/animal/cadastrarAnimal">Cadastrar Animal</a></li>
+                <li><a href="/veterinario/cadastrarVeterinario">Cadastrar Veterinário</a></li>
+                <li><a href="/consulta/agendarConsulta">Agendar Consulta</a></li>
+                <li>
+                  <form th:action="@{/logout}" method="post">
+                    <input type="submit" value="Sair"/>
+                  </form>
+                </li>
+            </ul>
+      </nav>
+      <section class="tabela">
+        <ul>
+          <li><a href="/consulta/exibirConsultas">Ver Consultas</a></li>
+          <li><a href="/cliente/exibirClientes">Ver Clientes</a></li>
+          <li><a href="/animal/exibirAnimais">Ver Animais</a></li>
+          <li><a href="/veterinario/exibirVeterinarios">Ver Veterinários</a></li>
+        </ul>
+        <div th:each="animal : ${animais}">
+            <br>
+            <div th:text="${animal.nomeAnimal}">Nome do Animal</div>
+                <div>Especie: <span th:text="${animal.especie}">Cão</span></h2>
+                <div>Raça: <span th:text="${animal.raca}">Labrador</span></div>
+                <div>Sexo: <span th:text="${animal.sexo}">F</span></div>
+                <div>Dono: <span th:text="${animal.dono}">José</span></div>
+                <div>Data Nascimento: <span th:text="${animal.dataNascimentoAnimal}">2020-01-01</span></div>		
+            </div>
+        </div>
+      </section>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  </body>
 </html>

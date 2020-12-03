@@ -5,6 +5,7 @@
   xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
   lang="pt-br"
 >
+
   <head>
     <meta charset="UTF-8" />
     <title>Cadastrar Cliente</title>
@@ -16,7 +17,7 @@
   </head>
   <body class="body__cadVet">
       <nav class="nav__vertical">
-            <a href="#" class="nav__logo"><img src="../style/logo.png" alt="Logo" class="brand-logo" /></a>
+            <a href="/paginaInicial" class="nav__logo"><img src="../style/logo.png" alt="Logo" class="brand-logo" /></a>
             <ul>
                 <li th:inline="text"> Olá [[${#httpServletRequest.remoteUser}]]!</li>
                 <li><a href="/paginaInicial">Página Inicial</a></li>

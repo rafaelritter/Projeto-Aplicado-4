@@ -16,7 +16,7 @@
   </head>
   <body class="body__inicial">
       <nav class="nav__vertical">
-            <a href="#" class="nav__logo"><img src="style/logo.png" alt="Logo" class="brand-logo" /></a>
+            <a href="/paginaInicial" class="nav__logo"><img src="style/logo.png" alt="Logo" class="brand-logo" /></a>
             <ul>
                 <li th:inline="text"> Olá [[${#httpServletRequest.remoteUser}]]!</li>
                 <li><a href="/paginaInicial">Página Inicial</a></li>
@@ -32,20 +32,11 @@
             </ul>
       </nav>
       <section class="tabela">
-        <div class="row">
-            <div class="col s5 search-container">
-                <form action="/action_page.php">
-                  <button type="submit"><i class="fa fa-search"></i></button>
-                  <input type="text" placeholder="Search.." name="search">
-                </form>
-            </div>
-        </div>
-        
         <ul>
-          <li><a href="#">Agendamentos</a></li>
-          <li><a href="#">Animais/Clientes</a></li>
-          <li><a href="#">Veterinários</a></li>
-          <li><a href="#">Fale Conosco</a></li>
+          <li><a href="/consulta/exibirConsultas">Ver Consultas</a></li>
+          <li><a href="/cliente/exibirClientes">Ver Clientes</a></li>
+          <li><a href="/animal/exibirAnimais">Ver Animais</a></li>
+          <li><a href="/veterinario/exibirVeterinarios">Ver Veterinários</a></li>
         </ul>
       </section>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

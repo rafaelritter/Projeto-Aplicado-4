@@ -1,39 +1,62 @@
-<html>
-	<head>
-        <meta charset="UTF-8" />
-        <title>Exibir Veterinários</title>
-		<link rel="stylesheet" href="reset.css" />
-		<link rel="stylesheet" href="style.css" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
-			rel="stylesheet"
-        />
-    </head>
-	<body>
-		<header>
-			<div>
-				<h1><img src="logo.png" /></h1>
-			</div>
-		</header>
-	
-	    <main>
-			<div th:each="veterinario : ${veterinarios}">
+<!DOCTYPE html>
 
-                <div th:text="${veterinario.nomeVeterinario}">Nome do Veterinário</div>
-                
-                <div>CRMV: <span th:text="${veterinario.crmv}">00000-00</span></h2>
-                <div>RG: <span th:text="${veterinario.rgVeterinario}">00.000.000-0</span></h2>
-                <div>CPF: <span th:text="${veterinario.cpfVeterinario}">00000000000</span></h2>
-                <div>E-mail: <span th:text="${veterinario.emailVeterinario}">veterinario@seudominio.com</span></h2>
-                <div>Celular: <span th:text="${veterinario.celularVeterinario}">(xx)xxxxx-xxxx</span></h2>
-                <div>Telefone: <span th:text="${veterinario.telefoneVeterinario}">(xx)xxxxx-xxxx</span></h2>
-                <div>Endereço: <span th:text="${veterinario.enderecoVeterinario}">Rua</span></h2>		
-                <div>Complemento: <span th:text="${veterinario.complementoVeterinario}">Complemento</span></h2>	
-                <div>Número: <span th:text="${veterinario.numeroResidenciaVeterinario}">123</span></h2>
-                <div>Cidade: <span th:text="${veterinario.cidadeVeterinario}">Cidade</span></h2>	
-                <div>Estado: <span th:text="${veterinario.estadoVeterinario}">Estado</span></h2>
-                <div>CEP: <span th:text="${veterinario.cepVeterinario}">00000000</span></h2>
-		    </div>
-        </main>
-    </body>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+  lang="pt-br"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Clínica Veterinária</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  </head>
+  <body class="body__inicial">
+      <nav class="nav__vertical">
+            <a href="/paginaInicial" class="nav__logo"><img src="../style/logo.png" alt="Logo" class="brand-logo" /></a>
+            <ul>
+                <li th:inline="text"> Olá [[${#httpServletRequest.remoteUser}]]!</li>
+                <li><a href="/paginaInicial">Página Inicial</a></li>
+                <li><a href="/cliente/cadastrarCliente">Cadastrar Cliente</a></li>
+                <li><a href="/animal/cadastrarAnimal">Cadastrar Animal</a></li>
+                <li><a href="/veterinario/cadastrarVeterinario">Cadastrar Veterinário</a></li>
+                <li><a href="/consulta/agendarConsulta">Agendar Consulta</a></li>
+                <li>
+                  <form th:action="@{/logout}" method="post">
+                    <input type="submit" value="Sair"/>
+                  </form>
+                </li>
+            </ul>
+      </nav>
+      <section class="tabela">
+        <ul>
+          <li><a href="/consulta/exibirConsultas">Ver Consultas</a></li>
+          <li><a href="/cliente/exibirClientes">Ver Clientes</a></li>
+          <li><a href="/animal/exibirAnimais">Ver Animais</a></li>
+          <li><a href="/veterinario/exibirVeterinarios">Ver Veterinários</a></li>
+        </ul>
+        <div th:each="veterinario : ${veterinarios}">
+            <br>
+            <div th:text="${veterinario.nomeVeterinario}">Nome do Veterinário</div>
+            
+            <div>CRMV: <span th:text="${veterinario.crmv}">00000-00</span></h2>
+            <div>RG: <span th:text="${veterinario.rgVeterinario}">00.000.000-0</span></h2>
+            <div>CPF: <span th:text="${veterinario.cpfVeterinario}">00000000000</span></h2>
+            <div>E-mail: <span th:text="${veterinario.emailVeterinario}">veterinario@seudominio.com</span></h2>
+            <div>Celular: <span th:text="${veterinario.celularVeterinario}">(xx)xxxxx-xxxx</span></h2>
+            <div>Telefone: <span th:text="${veterinario.telefoneVeterinario}">(xx)xxxxx-xxxx</span></h2>
+            <div>Endereço: <span th:text="${veterinario.enderecoVeterinario}">Rua</span></h2>		
+            <div>Complemento: <span th:text="${veterinario.complementoVeterinario}">Complemento</span></h2>	
+            <div>Número: <span th:text="${veterinario.numeroResidenciaVeterinario}">123</span></h2>
+            <div>Cidade: <span th:text="${veterinario.cidadeVeterinario}">Cidade</span></h2>	
+            <div>Estado: <span th:text="${veterinario.estadoVeterinario}">Estado</span></h2>
+            <div>CEP: <span th:text="${veterinario.cepVeterinario}">00000000</span></h2>
+        </div>
+      </section>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  </body>
 </html>
