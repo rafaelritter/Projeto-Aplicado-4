@@ -13,19 +13,6 @@ O projeto consiste em uma aplicação web para gerenciamento de uma clínica vet
   spring.datasource.username=usuario<br>
   spring.datasource.password=senha
 
-## Para Logar:
+## Login:
 Usuario = usuario <br>
 Senha = clinica
-
-## Links Localhost:
-http://localhost:8080/home
-<br>http://localhost:8080/login
-<br>http://localhost:8080/paginaInicial
-<br>http://localhost:8080/animal/cadastrarAnimal
-<br>http://localhost:8080/animal/exibirAnimais
-<br>http://localhost:8080/cliente/cadastrarCliente
-<br>http://localhost:8080/cliente/exibirClientes
-<br>http://localhost:8080/veterinario/cadastrarVeterinario
-<br>http://localhost:8080/veterinario/exibirVeterinarios
-<br>http://localhost:8080/consulta/agendarConsulta
-<br>http://localhost:8080/consulta/exibirConsultas
